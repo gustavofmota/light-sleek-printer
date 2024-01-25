@@ -1,0 +1,2 @@
+The SMTP_Example.env is just an example, for this to work properly you have to create a SMTP.env and put your credentials inside.
+The Host does not need to be google as long as you know what you doin ;)
