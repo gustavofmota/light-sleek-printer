@@ -1,6 +1,6 @@
 import Card from './CardComponent'
 
-let services = [
+const services = [
 	{
 		title: 'Service One',
 		description: 'Description for service one.',
@@ -18,19 +18,21 @@ let services = [
 	},
 ]
 
-function GroupServicesComponent() {
+function ServicesComponent() {
 	return (
-		<section>
+		<section id='services' className='services'>
 			{services.map((index, service) => {
-				;<Card
-					key={index}
-					title={service.title}
-					description={service.description}
-					image={service.image}
-				/>
+				return (
+					<Card
+						key={index}
+						title={service.title}
+						description={service.description}
+						image={service.image}
+					/>
+				)
 			})}
 		</section>
 	)
 }
 
-export default GroupServicesComponent
+export default ServicesComponent
