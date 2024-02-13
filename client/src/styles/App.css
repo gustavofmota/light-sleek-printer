@@ -1,0 +1,75 @@
+header{
+  display:flex;
+  flex-direction: row-reverse;
+  padding: 32px 32px 0 0;
+}
+
+.langPicker{
+    width: 64px;
+    height: 64px;
+    background: rgb(37,37,37);
+    border-radius: 50px;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.container{
+    align-items: center;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 3fr 1fr;
+    height: 100vh;
+    justify-items: center;
+    padding:0 32px;
+
+    .aboutText{
+        text-align: justify;
+        padding: 0 18px;
+        line-height: 40px;
+        font-size: 19px;
+
+        h1,p{
+            margin: 4px;
+        }
+    }
+
+    .secRow{
+        grid-column: 1 / -1;
+
+        .servScroller{
+            background: rgb(37, 37, 37);
+            box-sizing: border-box;
+            border-radius: 50px;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: 300;
+            height: 70px;
+            width: 250px;
+
+            p{
+                margin: 0;
+            }
+
+            img{
+              width: 8%;
+            }
+        }
+    }
+
+}
+
+
+.logo{
+    width: 600px;
+}
