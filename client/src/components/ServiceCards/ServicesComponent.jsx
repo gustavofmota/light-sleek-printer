@@ -21,7 +21,7 @@ const services = [
 function ServicesComponent() {
 	return (
 		<section id='services' className='services'>
-			{services.map((index, service) => {
+			{services.map((service, index) => {
 				return (
 					<Card
 						key={index}

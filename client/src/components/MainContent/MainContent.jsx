@@ -6,9 +6,9 @@ function MainContent() {
 	return (
 		<section className='container'>
 			<img src={logo} className='logo' alt='SleekPrint Logo' />
-			<About></About>
+			<About />
 			<div className='secRow'>
-				<OurServices></OurServices>
+				<OurServices />
 			</div>
 		</section>
 	)

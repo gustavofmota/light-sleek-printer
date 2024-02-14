@@ -1,5 +1,4 @@
-import Arrow_Down from '../../assets/images/Arrow_Down.svg'
-
+import { ReactComponent as ArrowDown } from '../../assets/images/Arrow_Down.svg'
 
 function OurServices() {
 	// This function will be called when the "OUR SERVICES" text or arrow is clicked
@@ -14,7 +13,7 @@ function OurServices() {
 	return (
 		<div className='servScroller' onClick={scrollToServices}>
 			<p>OUR SERVICES</p>
-			<img src={Arrow_Down} alt='' />
+			<ArrowDown className='img' />
 		</div>
 	)
 }
