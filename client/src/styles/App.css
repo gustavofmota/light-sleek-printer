@@ -93,7 +93,6 @@ section.services {
 	scroll-snap-align: start;
 
 	.tilt {
-		height: 87%;
 		width: 90%;
 		transform-style: preserve-3d;
 
@@ -103,10 +102,8 @@ section.services {
 			box-sizing: border-box;
 			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 			color: white;
-			height: 100%;
 			padding: 24px;
 			transform-style: preserve-3d;
-			width: 100%;
 			display: grid;
 			grid-template-rows: 1fr 8fr 1fr;
 
