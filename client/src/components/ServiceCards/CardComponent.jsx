@@ -1,6 +1,7 @@
 import { Tilt } from 'react-tilt'
 import Button from '../common/buttonComponent/ButtonComponent'
 
+
 const defaultOptions = {
 	reverse: false, // reverse the tilt direction
 	max: 10, // max tilt rotation (degrees)
@@ -13,14 +14,18 @@ const defaultOptions = {
 	easing: 'cubic-bezier(.03,.98,.52,.99)', // Easing on enter/exit.
 }
 
-function Card({ title, description, image }) {
+function Card({ title, description, image, code }) {
 	return (
 		<Tilt className='tilt' options={defaultOptions}>
 			<div className='card'>
 				<h1>{title}</h1>
 				<p>{description}</p>
 				<div className='btnContainer'>
-					<Button title={'Contact us'} type={'form'}></Button>
+					<Button
+						title={'Contact us'}
+						type={'form'}
+						code={code}
+					></Button>
 				</div>
 			</div>
 		</Tilt>
