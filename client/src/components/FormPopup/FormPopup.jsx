@@ -29,6 +29,13 @@ function FormPopup({ service }) {
 
 		// Here you would typically send the form data to a server
 		console.log(formData)
+		fetch('/api/data', {
+			method: 'POST',
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+			body: JSON.stringify(formData),
+		})
 
 		// Reset the form if needed
 		setFormData({
@@ -69,7 +76,7 @@ function FormPopup({ service }) {
 				<input
 					type='file'
 					name='file'
-					accept='.stl,.obj,.fbx,.png'
+					accept='.stl,.obj,.fbx,.gcode,.png'
 					onChange={handleChange}
 				/>
 				<button type='submit'>Send</button>

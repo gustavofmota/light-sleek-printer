@@ -1,4 +1,8 @@
 #ignore gmail connection file
 config/SMTP.env
 
+#ignore drive cred
+config/cred.json
+
+
 /node_modules
