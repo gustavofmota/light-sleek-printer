@@ -1,4 +1,4 @@
 #ignore gmail connection file
-server/config/SMTP.env
+config/SMTP.env
 
 /node_modules
