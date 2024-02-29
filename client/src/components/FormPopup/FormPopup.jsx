@@ -4,7 +4,7 @@ function FormPopup({ service }) {
 	const [formData, setFormData] = useState({
 		email: '',
 		subject: '',
-		description: '',
+		message: '',
 		file: null,
 		service,
 	})
@@ -28,7 +28,7 @@ function FormPopup({ service }) {
 		})
 
 		// Here you would typically send the form data to a server
-		console.log(formData)
+		console.log(JSON.stringify(formData))
 		fetch('/api/data', {
 			method: 'POST',
 			headers: {
@@ -41,8 +41,9 @@ function FormPopup({ service }) {
 		setFormData({
 			email: '',
 			subject: '',
-			description: '',
+			message: '',
 			file: null,
+			service: '',
 		})
 	}
 
@@ -67,16 +68,16 @@ function FormPopup({ service }) {
 					required
 				/>
 				<textarea
-					name='description'
-					value={formData.description}
+					name='message'
+					value={formData.message}
 					onChange={handleChange}
-					placeholder='Description'
+					placeholder='Message'
 					required
 				/>
 				<input
 					type='file'
 					name='file'
-					accept='.stl,.obj,.fbx,.gcode,.png'
+					accept='.stl,.obj,.fbx,.png'
 					onChange={handleChange}
 				/>
 				<button type='submit'>Send</button>

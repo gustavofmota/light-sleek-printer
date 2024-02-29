@@ -2,7 +2,7 @@
 config/SMTP.env
 
 #ignore drive cred
-config/cred.json
+config/credentials.json
 
 
 /node_modules
