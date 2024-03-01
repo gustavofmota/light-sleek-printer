@@ -20,11 +20,11 @@ const sendEmail = async ({ to, subject, ...rest }) => {
 	await transporter.sendMail(mailOptions(to, subject, message))
 }
 
-// const sendEmailToClient = async (options) => {
-// 	await transporter.sendMail(
-// 		mailOptions(options.to, options.subject, options.message)
-// 	)
-// }
+const sendEmailToClient = async (options) => {
+	await transporter.sendMail(
+		mailOptions(options.to, options.subject, options.message)
+	)
+}
 
 module.exports = sendEmail
-// module.exports = sendEmailToClient
+module.exports = sendEmailToClient

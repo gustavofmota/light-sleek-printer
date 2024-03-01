@@ -31,13 +31,13 @@ exports.emailController = async (req, res) => {
 		const autoMessage =
 			"We've received your request.\nWe will answer as soon as we can.\n\nWish you the best,\nSleekPrint"
 
-		// const options2 = {
-		// 	from: process.env.SMTP_MAIL,
-		// 	to: email,
-		// 	subject: autoSubject,
-		// 	message: autoMessage,
-		// }
-		// await sendEmailToClient(options2)
+		const options2 = {
+			from: process.env.SMTP_MAIL,
+			to: email,
+			subject: autoSubject,
+			message: autoMessage,
+		}
+		await sendEmailToClient(options2)
 
 		res.status(200).json({ message: 'Check your Email' })
 	} catch (error) {
